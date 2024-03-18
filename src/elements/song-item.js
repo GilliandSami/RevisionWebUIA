@@ -21,12 +21,11 @@ class SongItem extends HTMLElement {
     </div>
   </a>`
 
-    // Ajoute un écouteur d'événements sur le bouton de lecture. Lorsque ce bouton est cliqué, l'événement par défaut est empêché
-    // (par exemple, si le bouton est dans un formulaire, cela empêcherait le formulaire de se soumettre) et l'événement personnalisé 'play_click'
-    // est déclenché sur l'élément. Cela permet à d'autres parties de l'application d'écouter et de réagir à cet événement.
+    // Ajoute un écouteur d'événements sur le bouton de lecture. Lorsque ce bouton est cliqué, l'événement par défaut 
+    // est empêché et l'événement personnalisé 'play_click' est déclenché sur l'élément.
     this.querySelector('.play-button').addEventListener('click', (e) => {
-      e.preventDefault()
-      this.dispatchEvent(playClick)
+      e.preventDefault() // Empêche l'action par défaut (par exemple, suivre le lien).
+      this.dispatchEvent(playClick) // Déclenche l'événement 'play_click' sur cet élément.
     })
   }
 }
