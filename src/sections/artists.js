@@ -10,12 +10,11 @@ const displayArtists = () => loadArtists().then((artists) => {
   artistList.replaceChildren()
 
   artists.forEach((artist) => {
-    const newElement = document.createElement('artist-cover')
-    newElement.name = "...."
-    newElement.setAttribute('href', `#artists-${artist.id}`)
-    newElement.setAttribute('name', artist.name)
-    newElement.setAttribute('cover', artist.image_url)
-    artistList.appendChild(newElement)
+    const newElement = document.createElement('artist-cover');
+    newElement.setAttribute('href', `#artists-${artist.id}`);
+    newElement.setAttribute('name', artist.name);
+    newElement.setAttribute('cover', artist.image_url);
+    artistList.appendChild(newElement);
   })
 })
 
