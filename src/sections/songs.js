@@ -1,5 +1,6 @@
 // Étape 6 (suite) : Logique pour afficher les chansons d'un artiste sélectionné
-import { loadSongs } from '../api.js'
+import { loadSongs, loadSearchSongs } from '../api.js'
+import { setItem, getItem, getItems, removeItem } from '../local-storage.js'
 import playSong from './player.js'
 
 const listSectionTitle = document.querySelector('#list-section h4')
@@ -13,12 +14,23 @@ const displaySongArray = (songs) => {
   songs.forEach((song) => {
     const newElement = document.createElement('song-item')
     newElement.setAttribute('title', song.title)
+    newElement.setAttribute('favorite', !!getItem(song.id));
 
     newElement.addEventListener('play_click', () => {
       playSong(song, songs)
-    })
+    });
 
-    songList.appendChild(newElement)
+    newElement.addEventListener('favorite_click', () => {
+      if (getItem(song.id)) {
+        removeItem(song.id);
+      } else {
+        setItem(song.id, song);
+      }
+
+      newElement.setAttribute('favorite', !!getItem(song.id));
+    });
+
+    songList.appendChild(newElement);
   })
 }
 
@@ -33,9 +45,15 @@ const displayArtistSongs = (id) => {
 const displaySearchSongs = (query) => {
   loadSearchSongs(query).then((songs) => {
     listSectionTitle.innerHTML = `Recherche`
-
     displaySongArray(songs)
   })
 }
 
-export { displayArtistSongs, displaySearchSongs }
+const displayFavoriteSongs = () => {
+  const allSongs = getItems();
+
+  listSectionTitle.innerHTML = 'Favoris';
+  displaySongArray(allSongs);
+}
+
+export { displayArtistSongs, displaySearchSongs, displayFavoriteSongs }

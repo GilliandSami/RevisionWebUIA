@@ -6,7 +6,7 @@ import './elements/song-item.js'
 import { displaySection, activateLink } from './helpers.js'
 
 import { displayArtists } from './sections/artists.js'
-import { displayArtistSongs, displaySearchSongs } from './sections/songs.js'
+import { displayArtistSongs, displaySearchSongs, displayFavoriteSongs } from './sections/songs.js'
 
 // Logique de routage basée sur l'URL pour décider quelle section afficher
 const routeur = () => {
@@ -38,6 +38,11 @@ const routeur = () => {
       displaySection('list')
       displaySearchSongs(hashs[1])
       break;
+
+    case '#favorites':
+      displaySection('list')
+      displayFavoriteSongs();
+      break;
   }
 }
 
@@ -45,3 +50,15 @@ window.addEventListener('hashchange', routeur)
 
 // Appel initial pour configurer la vue basée sur l'URL actuelle
 routeur()
+
+
+const searchButton = document.querySelector('#search-trigger')
+const searchInput = document.querySelector('#search-input')
+
+searchButton.addEventListener('click', () => {
+  searchInput.classList.add('active')
+})
+
+searchInput.addEventListener('input', (e) => {
+  window.location.hash = `#search-${encodeURIComponent(searchInput.value)}`
+})

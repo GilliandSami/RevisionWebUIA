@@ -1,16 +1,16 @@
-5929
+5930
 104C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\css-font-palette.js133546174803170374 0
 92C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\core\src\InternalConfig.js133546174801705447 0
 81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\json5\dist\index.min.js133546174789415839 0
 108C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-select\node_modules\domutils\lib\legacy.js.map133546174795102674 0
 97C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\mdn-data\css\index.js133546174788573421 0
-71C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.975ef6c8.js.map133552284838206497 0
+71C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.975ef6c8.js.map133553123304226543 0
 112C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@babel\highlight\node_modules\ansi-styles\package.json133546174787461933 0
 99C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\mdn-data\css\units.json133546174794261285 0
 104C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-select\node_modules\domutils\lib\legacy.js133546174791003751 0
 72C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\supports-color133551466145526358 1
 74C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\js-yaml\lib\type133551466133141656 1
-67C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.975ef6c8.js133552284838176426 0
+67C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.975ef6c8.js133553123304047544 0
 123C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-select\node_modules\entities\lib\generated\encode-html.js.map133546174795884376 0
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\dom-serializer\node_modules\entities\lib\index.js133546174789356382 0
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@swc\helpers\_\_sliced_to_array133551466092074838 1
@@ -29,7 +29,7 @@
 84C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\svgo\plugins\reusePaths.js133546174799059276 0
 81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\lib\replace\atrule133551466120014677 1
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\regions\MD.js133546174807210014 0
-49C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist133552284838216521 1
+49C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist133553123304236505 1
 87C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\entities\lib\maps\legacy.json133546174791882051 0
 75C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@msgpackr-extract133551466040956064 1
 74C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\elements\artists-cover.js133552286982209402 0
@@ -49,7 +49,7 @@
 67C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\callsites133551466095412144 1
 80C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\source-map\lib\util.js133546174792323272 0
 94C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\webhid.js133546174809539985 0
-48C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src133551466149449365 1
+48C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src133552295110513889 1
 80C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\js-tokens\package.json133546174787202413 0
 78C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\htmlnano\lib\presets133551466131351284 1
 82C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\semver\functions\sort.js133546174795982588 0
@@ -72,7 +72,7 @@
 133C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Parentheses.js133546174799604644 0
 105C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\lmdb.h133546174799833093 0
 83C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\package.json133546174809808921 0
-55C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\api.js133552243848924182 0
+55C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\api.js133553099329768379 0
 70C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite133551466107046656 1
 84C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\react-refresh\package.json133546174790935059 0
 71C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\svgo\lib\svgo133551466145991521 1
@@ -96,7 +96,7 @@
 57C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\elements133551466149319364 1
 110C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest_enc.c133546174797878413 0
 126C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\cleanupAttrs.js133546174791204229 0
-59C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\helpers.js133552244549957301 0
+59C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\helpers.js133553123900323345 0
 83C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\semver\ranges\simplify.js133546174795932634 0
 92C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@swc\helpers\_\_throw\package.json133546174805167576 0
 78C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\posthtml-render\dist133551466142998895 1
@@ -118,11 +118,11 @@
 78C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\json5\lib\index.d.ts133546174792996138 0
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\css-conic-gradients.js133546174802697197 0
 115C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\lib\syntax\node\Parentheses.js133546174804265189 0
-59C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\index.html133552243541622009 0
+59C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\index.html133553123876739087 0
 121C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-mdb.txt133546174802657143 0
 101C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\link-icon-png.js133546174806969815 0
 65C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\is-glob133551466132126483 1
-57C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\index.js133552243839854309 0
+57C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\index.js133553123887164049 0
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\lib\syntax\node\CDC.js133546174802184881 0
 52C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\lib133551466149429359 1
 69C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\cosmiconfig133551466108198892 1
@@ -130,6 +130,12 @@
 122C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\inlineStyles.js133546174794417884 0
 74C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\tslib\tslib.html133546174787809879 0
 93C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\mdn-data\index.js133546174789001418 0
+102C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\feature-policy.js133546174805447194 0
+85C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\svgo\plugins\removeXlink.js133546174799059276 0
+86C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\src\urlJoin.js133546174802382158 0
+69C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\timsort\src133551466147320037 1
+65C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\local-storage.js133553086954351741 0
+64C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@babel133551466039291871 1
 95C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\source-map\lib\source-map-consumer.js133546174791553565 0
 111C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\index.js133546174789001418 0
 70C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\browserslist133551466095302150 1
@@ -137,7 +143,7 @@
 109C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\cjs\generator\create.cjs133546174793663526 0
 113C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-select\node_modules\domutils\lib\esm\feeds.d.ts.map133546174793302420 0
 95C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\runtime-js\lib\helpers\worker133551466072279192 1
-68C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\sections\artists.js133552286967004547 0
+68C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\sections\artists.js133552612133712700 0
 69C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\detect-libc133551466126320871 1
 66C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-tree133551466115694567 1
 101C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\htmlnano\lib\modules\removeOptionalTags.cjs133546174793990527 0
@@ -145,7 +151,7 @@
 92C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\cors.js133546174802042318 0
 67C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\sections\player.js133546167936147553 0
 130C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\README.md133546174790021103 0
-66C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\sections\songs.js133552243874818347 0
+66C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\sections\songs.js133553123893504288 0
 71C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\lib\formatTimestamp.js133546167936137476 0
 99C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@swc\helpers\src\_object_spread_props.mjs133546174805891963 0
 88C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\update-browserslist-db\LICENSE133546174787382249 0
@@ -161,7 +167,7 @@
 74C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\srcset\readme.md133546174788764140 0
 113C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\package-manager\test\NodePackageManager.test.js133546174797547455 0
 72C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\dom-serializer133551466126702637 1
-70C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\elements\song-item.js133552284837626608 0
+70C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\src\elements\song-item.js133553123906629991 0
 99C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@swc\helpers\src\_array_without_holes.mjs133546174805427190 0
 109C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@babel\code-frame\node_modules\color-name\README.md133546174788392994 0
 114C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\abortcontroller-polyfill\src\abortcontroller-polyfill.js133546174789095255 0
@@ -204,11 +210,6 @@
 81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\picocolors\package.json133546174788724120 0
 62C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\.bin133551466038080345 1
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\regions\TZ.js133546174809123703 0
-102C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\features\feature-policy.js133546174805447194 0
-85C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\svgo\plugins\removeXlink.js133546174799059276 0
-86C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\src\urlJoin.js133546174802382158 0
-69C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\timsort\src133551466147320037 1
-64C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@babel133551466039291871 1
 74C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\svgo\lib\path.js133546174793234724 0
 92C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\packager-wasm\package.json133546174792180198 0
 70C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\open.js133546174802042318 0
@@ -2233,8 +2234,6 @@
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\module.c133546174797808951 0
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\module.h133546174801625764 0
 86C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-tree\cjs\lexer\Lexer.cjs133546174798505386 0
-93C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\lib\replace\property\border.js133546174797271549 0
-81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\js-yaml\lib\type\set.js133546174794261285 0
 82C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\reporter-cli\src133551466070693677 1
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest5.c133546174798505386 0
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest6.c133546174798609228 0
@@ -2338,6 +2337,8 @@
 81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\js-yaml\lib\type\seq.js133546174794251300 0
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\caniuse-lite\data\regions\BY.js133546174799534315 0
 95C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@swc\helpers\_\_inherits\package.json133546174804613565 0
+93C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\lib\replace\property\border.js133546174797271549 0
+81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\js-yaml\lib\type\set.js133546174794261285 0
 92C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\packager-js\lib\helpers.js133546174793302420 0
 94C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-tree\lib\syntax\scope\default.js133546174803143638 0
 81C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\js-yaml\lib\type\str.js133546174794417884 0
@@ -2996,8 +2997,8 @@
 95C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\cjs\walker133551466122895838 1
 106C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\cjs\walker\create.cjs133546174794261285 0
 95C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\core\lib\public\Dependency.js133546174799268977 0
-104C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\cjs\utils\clone.cjs133546174792605107 0
 111C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\input\sourcemap\source-root.js.map133546174806732272 0
+104C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\cjs\utils\clone.cjs133546174792605107 0
 137C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\utils\createCustomError.js133546174794417884 0
 107C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\css-tree\lib\syntax\node\PseudoElementSelector.js133546174804482677 0
 118C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\csso\node_modules\css-tree\cjs\utils\create-custom-error.cjs133546174793214629 0
@@ -4783,7 +4784,7 @@
 131C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\pseudo\slotted.js133546174801543021 0
 91C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\workers\src\childState.js133546174795732784 0
 100C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\workers\src\core-worker.browser.js133546174796004418 0
-68C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.3092e1e0.css133552243546067917 0
+68C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.3092e1e0.css133553106204975025 0
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\workers\src\cpuCount.js133546174796221027 0
 86C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\workers\src\index.js133546174796905618 0
 85C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\workers\src\process133551466081375361 1
@@ -4808,7 +4809,7 @@
 82C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\input133551466080230183 1
 97C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\prettifyTime.test.js133546174801827178 0
 94C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\sourcemap.test.js133546174802250499 0
-72C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.3092e1e0.css.map133552243546136902 0
+72C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.3092e1e0.css.map133553106205005559 0
 92C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\urlJoin.test.js133546174802382158 0
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\input\config133551466080210187 1
 102C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\@parcel\utils\test\input\sourcemap\inline.js133546174801558585 0
@@ -5927,4 +5928,4 @@
 73C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\.bin\semver.ps1133546175056774211 0
 71C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\.bin\svgo.ps1133546175056784282 0
 89C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\node_modules\.bin\update-browserslist-db.cmd133546175056774211 0
-60C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.html133552243546207583 0
+60C:\Users\PC\Desktop\ProjetWMUI\Revision_Exam\dist\index.html133553106205155552 0

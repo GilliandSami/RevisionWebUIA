@@ -615,11 +615,23 @@ const routeur = ()=>{
             (0, _helpersJs.displaySection)("list");
             (0, _songsJs.displaySearchSongs)(hashs[1]);
             break;
+        case "#favorites":
+            (0, _helpersJs.displaySection)("list");
+            (0, _songsJs.displayFavoriteSongs)();
+            break;
     }
 };
 window.addEventListener("hashchange", routeur);
 // Appel initial pour configurer la vue basée sur l'URL actuelle
 routeur();
+const searchButton = document.querySelector("#search-trigger");
+const searchInput = document.querySelector("#search-input");
+searchButton.addEventListener("click", ()=>{
+    searchInput.classList.add("active");
+});
+searchInput.addEventListener("input", (e)=>{
+    window.location.hash = `#search-${encodeURIComponent(searchInput.value)}`;
+});
 
 },{"./elements/artists-cover.js":"1UAVc","./elements/song-item.js":"2U4Q3","./helpers.js":"ecN5O","./sections/artists.js":"7tyNw","./sections/songs.js":"10tUP"}],"1UAVc":[function(require,module,exports) {
 // Étape 5 : Définition d'un élément web personnalisé pour représenter un artiste
@@ -644,23 +656,45 @@ customElements.define("artist-cover", ArtistCover);
 
 },{}],"2U4Q3":[function(require,module,exports) {
 // Étape 5 (suite) : Définition d'un élément web personnalisé pour représenter une chanson
+// Crée un nouvel événement personnalisé 'play_click'. Cet événement peut être écouté et géré ailleurs dans l'application
 const playClick = new CustomEvent("play_click");
+const favoriteClick = new CustomEvent("favorite_click");
 class SongItem extends HTMLElement {
+    static observedAttributes = [
+        "favorite"
+    ];
     connectedCallback() {
+        this.render();
+    }
+    attributeChangedCallback() {
+        this.render();
+    }
+    render() {
+        // Définit le HTML interne de l'élément. 
+        // Utilise le modèle de littéraux de gabarit pour insérer dynamiquement l'attribut 'title' de l'élément dans le HTML.
+        const favoriteIcon = this.getAttribute("favorite") == "true" ? "favorite" : "favorite_border";
         this.innerHTML = `<a href="#">
-    <div class="list-item-title">${this.getAttribute("title")}</div>
-    <div class="list-item-actions">
-      <button type="button" class="icon-button favorite-button ">
-        <span class="material-icons">favorite</span>
-      </button>
-      <button type="button" class="icon-button play-button">
-        <span class="material-icons">play_arrow</span>
-      </button>
-    </div>
-  </a>`;
+      <div class="list-item-title">${this.getAttribute("title")}</div>
+      <div class="list-item-actions">
+        <button type="button" class="icon-button favorite-button ">
+          <span class="material-icons">${favoriteIcon}</span>
+        </button>
+        <button type="button" class="icon-button play-button">
+          <span class="material-icons">play_arrow</span>
+        </button>
+      </div>
+    </a>`;
+        // Ajoute un écouteur d'événements sur le bouton de lecture. Lorsque ce bouton est cliqué, l'événement par défaut 
+        // est empêché et l'événement personnalisé 'play_click' est déclenché sur l'élément.
         this.querySelector(".play-button").addEventListener("click", (e)=>{
+            e.preventDefault() // Empêche l'action par défaut (par exemple, suivre le lien).
+            ;
+            this.dispatchEvent(playClick) // Déclenche l'événement 'play_click' sur cet élément.
+            ;
+        });
+        this.querySelector(".favorite-button").addEventListener("click", (e)=>{
             e.preventDefault();
-            this.dispatchEvent(playClick);
+            this.dispatchEvent(favoriteClick);
         });
     }
 }
@@ -682,19 +716,10 @@ const displaySection = (id)=>{
 const activateLink = (id)=>{
     // Logique pour activer le lien de navigation correspondant
     const activeLink = document.querySelector(`nav a.active`);
-    activeLink.classList.remove("active");
+    activeLink?.classList.remove("active");
     const link = document.querySelector(`nav a[href="${id}"]`);
-    link.classList.add("active");
+    link?.classList.add("active");
 };
-// Helpers pour l'affichage de la recherche
-const searchButton = document.querySelector("#search-trigger");
-const searchInput = document.querySelector("#search-input");
-searchButton.addEventListener("click", ()=>{
-    searchInput.classList.add("active");
-});
-searchInput.addEventListener("input", (e)=>{
-    window.location.hash = `#search-${encodeURIComponent(searchInput.value)}`;
-});
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -777,7 +802,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "displayArtistSongs", ()=>displayArtistSongs);
 parcelHelpers.export(exports, "displaySearchSongs", ()=>displaySearchSongs);
+parcelHelpers.export(exports, "displayFavoriteSongs", ()=>displayFavoriteSongs);
 var _apiJs = require("../api.js");
+var _localStorageJs = require("../local-storage.js");
 var _playerJs = require("./player.js");
 var _playerJsDefault = parcelHelpers.interopDefault(_playerJs);
 const listSectionTitle = document.querySelector("#list-section h4");
@@ -788,8 +815,14 @@ const displaySongArray = (songs)=>{
     songs.forEach((song)=>{
         const newElement = document.createElement("song-item");
         newElement.setAttribute("title", song.title);
+        newElement.setAttribute("favorite", !!(0, _localStorageJs.getItem)(song.id));
         newElement.addEventListener("play_click", ()=>{
             (0, _playerJsDefault.default)(song, songs);
+        });
+        newElement.addEventListener("favorite_click", ()=>{
+            if ((0, _localStorageJs.getItem)(song.id)) (0, _localStorageJs.removeItem)(song.id);
+            else (0, _localStorageJs.setItem)(song.id, song);
+            newElement.setAttribute("favorite", !!(0, _localStorageJs.getItem)(song.id));
         });
         songList.appendChild(newElement);
     });
@@ -801,13 +834,18 @@ const displayArtistSongs = (id)=>{
     });
 };
 const displaySearchSongs = (query)=>{
-    loadSearchSongs(query).then((songs)=>{
+    (0, _apiJs.loadSearchSongs)(query).then((songs)=>{
         listSectionTitle.innerHTML = `Recherche`;
         displaySongArray(songs);
     });
 };
+const displayFavoriteSongs = ()=>{
+    const allSongs = (0, _localStorageJs.getItems)();
+    listSectionTitle.innerHTML = "Favoris";
+    displaySongArray(allSongs);
+};
 
-},{"../api.js":"8Zgej","./player.js":"m0Ody","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"m0Ody":[function(require,module,exports) {
+},{"../api.js":"8Zgej","./player.js":"m0Ody","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../local-storage.js":"EAMLy"}],"m0Ody":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _formatTimestamp = require("../lib/formatTimestamp");
@@ -938,6 +976,18 @@ function formatTimestamp(timestamp) {
     if (seconds < 10) seconds = "0" + seconds;
     return minutes + ":" + seconds;
 }
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"EAMLy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "setItem", ()=>setItem);
+parcelHelpers.export(exports, "getItem", ()=>getItem);
+parcelHelpers.export(exports, "getItems", ()=>getItems);
+parcelHelpers.export(exports, "removeItem", ()=>removeItem);
+const setItem = (id, value)=>localStorage.setItem(id, JSON.stringify(value));
+const getItem = (id)=>JSON.parse(localStorage.getItem(id));
+const getItems = ()=>Object.keys(localStorage).map(getItem);
+const removeItem = (id)=>localStorage.removeItem(id);
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["farZc","8lqZg"], "8lqZg", "parcelRequiref161")
 

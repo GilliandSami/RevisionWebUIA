@@ -15,23 +15,11 @@ const activateLink = (id) => {
   // Logique pour activer le lien de navigation correspondant
 
   const activeLink = document.querySelector(`nav a.active`)
-  activeLink.classList.remove('active')
+  activeLink?.classList.remove('active')
 
   const link = document.querySelector(`nav a[href="${id}"]`)
-  link.classList.add('active')
+  link?.classList.add('active')
 }
 
-// Helpers pour l'affichage de la recherche
-const searchButton = document.querySelector('#search-trigger')
-const searchInput = document.querySelector('#search-input')
-
-
-searchButton.addEventListener('click', () => {
-  searchInput.classList.add('active')
-})
-
-searchInput.addEventListener('input', (e) => {
-  window.location.hash = `#search-${encodeURIComponent(searchInput.value)}`
-})
 
 export { displaySection, activateLink }
