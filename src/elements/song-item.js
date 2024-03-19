@@ -22,7 +22,7 @@ class SongItem extends HTMLElement {
     const favoriteIcon = this.getAttribute('favorite') == 'true' ? 'favorite' : 'favorite_border';
 
     this.innerHTML =
-      `<a href="#">
+      `<a href="${this.getAttribute('href')}">
       <div class="list-item-title">${this.getAttribute('title')}</div>
       <div class="list-item-actions">
         <button type="button" class="icon-button favorite-button ">

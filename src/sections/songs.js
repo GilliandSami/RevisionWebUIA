@@ -1,5 +1,5 @@
 // Étape 6 (suite) : Logique pour afficher les chansons d'un artiste sélectionné
-import { loadSongs, loadSearchSongs } from '../api.js'
+import { loadSongs, loadSearchSongs, loadLyrics } from '../api.js'
 import { setItem, getItem, getItems, removeItem } from '../local-storage.js'
 import playSong from './player.js'
 
@@ -15,6 +15,7 @@ const displaySongArray = (songs) => {
     const newElement = document.createElement('song-item')
     newElement.setAttribute('title', song.title)
     newElement.setAttribute('favorite', !!getItem(song.id));
+    newElement.setAttribute('href', `#songs-${song.id}`);
 
     newElement.addEventListener('play_click', () => {
       playSong(song, songs)
@@ -56,4 +57,17 @@ const displayFavoriteSongs = () => {
   displaySongArray(allSongs);
 }
 
-export { displayArtistSongs, displaySearchSongs, displayFavoriteSongs }
+const displayLyrics = (id) => {
+  loadLyrics(id).then((song) => {
+    const nomArtiste = document.querySelector('#lyrics-section h5');
+    const nomSong = document.querySelector('#lyrics-section h4');
+    const lyrics = document.querySelector('#lyrics-section p');
+
+    nomSong.innerHTML = song.title;
+    nomArtiste.innerHTML = song.artist.name;
+    lyrics.innerHTML = song.lyrics;
+
+  })
+}
+
+export { displayArtistSongs, displaySearchSongs, displayFavoriteSongs, displayLyrics }

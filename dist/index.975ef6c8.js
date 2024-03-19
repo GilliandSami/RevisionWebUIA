@@ -619,6 +619,10 @@ const routeur = ()=>{
             (0, _helpersJs.displaySection)("list");
             (0, _songsJs.displayFavoriteSongs)();
             break;
+        case "#songs":
+            (0, _helpersJs.displaySection)("lyrics");
+            (0, _songsJs.displayLyrics)(hashs[1]);
+            break;
     }
 };
 window.addEventListener("hashchange", routeur);
@@ -673,7 +677,7 @@ class SongItem extends HTMLElement {
         // Définit le HTML interne de l'élément. 
         // Utilise le modèle de littéraux de gabarit pour insérer dynamiquement l'attribut 'title' de l'élément dans le HTML.
         const favoriteIcon = this.getAttribute("favorite") == "true" ? "favorite" : "favorite_border";
-        this.innerHTML = `<a href="#">
+        this.innerHTML = `<a href="${this.getAttribute("href")}">
       <div class="list-item-title">${this.getAttribute("title")}</div>
       <div class="list-item-actions">
         <button type="button" class="icon-button favorite-button ">
@@ -777,6 +781,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "loadArtists", ()=>loadArtists);
 parcelHelpers.export(exports, "loadSongs", ()=>loadSongs);
 parcelHelpers.export(exports, "loadSearchSongs", ()=>loadSearchSongs);
+parcelHelpers.export(exports, "loadLyrics", ()=>loadLyrics);
 const BASE_URL = "https://webmob-ui-22-spotlified.herokuapp.com";
 function loadJson(url) {
     return fetch(url).then((response)=>{
@@ -795,6 +800,10 @@ function loadSearchSongs(query) {
     const url = `${BASE_URL}/api/songs/search/${query}`;
     return loadJson(url);
 }
+function loadLyrics(id) {
+    const url = `${BASE_URL}/api/songs/${id}`;
+    return loadJson(url);
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"10tUP":[function(require,module,exports) {
 // Étape 6 (suite) : Logique pour afficher les chansons d'un artiste sélectionné
@@ -803,6 +812,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "displayArtistSongs", ()=>displayArtistSongs);
 parcelHelpers.export(exports, "displaySearchSongs", ()=>displaySearchSongs);
 parcelHelpers.export(exports, "displayFavoriteSongs", ()=>displayFavoriteSongs);
+parcelHelpers.export(exports, "displayLyrics", ()=>displayLyrics);
 var _apiJs = require("../api.js");
 var _localStorageJs = require("../local-storage.js");
 var _playerJs = require("./player.js");
@@ -816,6 +826,7 @@ const displaySongArray = (songs)=>{
         const newElement = document.createElement("song-item");
         newElement.setAttribute("title", song.title);
         newElement.setAttribute("favorite", !!(0, _localStorageJs.getItem)(song.id));
+        newElement.setAttribute("href", `#songs-${song.id}`);
         newElement.addEventListener("play_click", ()=>{
             (0, _playerJsDefault.default)(song, songs);
         });
@@ -843,6 +854,16 @@ const displayFavoriteSongs = ()=>{
     const allSongs = (0, _localStorageJs.getItems)();
     listSectionTitle.innerHTML = "Favoris";
     displaySongArray(allSongs);
+};
+const displayLyrics = (id)=>{
+    (0, _apiJs.loadLyrics)(id).then((song)=>{
+        const nomArtiste = document.querySelector("#lyrics-section h5");
+        const nomSong = document.querySelector("#lyrics-section h4");
+        const lyrics = document.querySelector("#lyrics-section p");
+        nomSong.innerHTML = song.title;
+        nomArtiste.innerHTML = song.artist.name;
+        lyrics.innerHTML = song.lyrics;
+    });
 };
 
 },{"../api.js":"8Zgej","./player.js":"m0Ody","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../local-storage.js":"EAMLy"}],"m0Ody":[function(require,module,exports) {

@@ -6,7 +6,7 @@ import './elements/song-item.js'
 import { displaySection, activateLink } from './helpers.js'
 
 import { displayArtists } from './sections/artists.js'
-import { displayArtistSongs, displaySearchSongs, displayFavoriteSongs } from './sections/songs.js'
+import { displayArtistSongs, displaySearchSongs, displayFavoriteSongs, displayLyrics } from './sections/songs.js'
 
 // Logique de routage basée sur l'URL pour décider quelle section afficher
 const routeur = () => {
@@ -41,7 +41,12 @@ const routeur = () => {
 
     case '#favorites':
       displaySection('list')
-      displayFavoriteSongs();
+      displayFavoriteSongs()
+      break;
+
+    case '#songs':
+      displaySection('lyrics');
+      displayLyrics(hashs[1]);
       break;
   }
 }

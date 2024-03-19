@@ -24,4 +24,9 @@ function loadSearchSongs(query) {
     return loadJson(url);
 }
 
-export { loadArtists, loadSongs, loadSearchSongs }
+function loadLyrics(id) {
+    const url = `${BASE_URL}/api/songs/${id}`;
+    return loadJson(url);
+}
+
+export { loadArtists, loadSongs, loadSearchSongs, loadLyrics }
